@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BARA Product Render — Design 6: BARA Wordmark
+  Format: Twitter (1200x675)
+  View: Wordmark across multiple products — grid layout
+  Creative Director: Pixel | 2026-03-30
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+    </style>
+    <linearGradient id="fabric-black" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="50%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0A0A0A"/>
+
+  <!-- 2x2 product grid -->
+
+  <!-- TOP LEFT: Tee — center chest wordmark -->
+  <g transform="translate(30, 30)">
+    <rect width="280" height="270" rx="6" fill="#111111" stroke="#1A1A1A" stroke-width="0.5"/>
+    <g transform="translate(45, 20) scale(0.34)">
+      <path d="M 200,0 L 160,0 C 140,0 120,10 110,30 L 40,80 L 0,140 L 60,180 L 110,130 L 110,500 L 500,500 L 500,130 L 550,180 L 610,140 L 570,80 L 500,30 C 490,10 470,0 450,0 L 410,0 C 390,20 360,35 305,35 C 250,35 220,20 200,0 Z" fill="url(#fabric-black)" stroke="#252525" stroke-width="2"/>
+      <text x="230" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="28" fill="#F5F5F5" letter-spacing="8">BARA</text>
+    </g>
+    <text x="140" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#666666">Tee — Center Chest</text>
+    <text x="140" y="256" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="10" fill="#555555">DTG ~4"</text>
+  </g>
+
+  <!-- TOP RIGHT: Crewneck — left chest -->
+  <g transform="translate(325, 30)">
+    <rect width="280" height="270" rx="6" fill="#111111" stroke="#1A1A1A" stroke-width="0.5"/>
+    <g transform="translate(45, 20) scale(0.34)">
+      <path d="M 200,0 L 160,0 C 140,0 120,10 110,30 L 40,80 L 0,140 L 60,180 L 110,130 L 110,500 L 500,500 L 500,130 L 550,180 L 610,140 L 570,80 L 500,30 C 490,10 470,0 450,0 L 410,0 C 390,20 360,35 305,35 C 250,35 220,20 200,0 Z" fill="url(#fabric-black)" stroke="#252525" stroke-width="2"/>
+      <text x="175" y="150" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="16" fill="#F5F5F5" letter-spacing="5">BARA</text>
+    </g>
+    <text x="140" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#666666">Crewneck — Left Chest</text>
+    <text x="140" y="256" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="10" fill="#555555">Embroidery ~2.5"</text>
+  </g>
+
+  <!-- BOTTOM LEFT: Camp Cap -->
+  <g transform="translate(30, 315)">
+    <rect width="280" height="270" rx="6" fill="#111111" stroke="#1A1A1A" stroke-width="0.5"/>
+    <!-- Simple cap silhouette -->
+    <g transform="translate(60, 40)">
+      <path d="M 20,120 C 20,60 50,20 80,10 C 110,0 140,0 160,10 C 180,20 195,45 195,70 L 195,120 Z" fill="url(#fabric-black)" stroke="#252525" stroke-width="1"/>
+      <!-- Brim -->
+      <path d="M 10,120 C 10,115 15,110 20,110 L 195,110 C 200,110 210,112 215,120 L 220,135 C 215,140 200,142 180,142 L 30,142 C 15,142 10,135 10,120 Z" fill="#161616" stroke="#252525" stroke-width="1"/>
+      <!-- BARA wordmark on cap -->
+      <text x="108" y="80" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="14" fill="#F5F5F5" letter-spacing="3">BARA</text>
+    </g>
+    <text x="140" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#666666">Camp Cap — Center Front</text>
+    <text x="140" y="256" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="10" fill="#555555">Embroidery 1.5-2"</text>
+  </g>
+
+  <!-- BOTTOM RIGHT: Enamel Pin + Sticker -->
+  <g transform="translate(325, 315)">
+    <rect width="280" height="270" rx="6" fill="#111111" stroke="#1A1A1A" stroke-width="0.5"/>
+    <!-- Pin circle -->
+    <circle cx="100" cy="120" r="35" fill="#1A1A1A" stroke="#333333" stroke-width="1.5"/>
+    <text x="100" y="117" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10" fill="#F5F5F5" letter-spacing="2">BARA</text>
+    <rect x="93" y="122" width="3" height="10" fill="#00FF41" opacity="0.8"/>
+    <!-- Sticker -->
+    <rect x="155" y="88" width="70" height="65" rx="4" fill="#1A1A1A" stroke="#333333" stroke-width="1"/>
+    <text x="190" y="118" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#F5F5F5" letter-spacing="2">BARA</text>
+    <rect x="185" y="125" width="3" height="8" fill="#00FF41" opacity="0.8"/>
+
+    <text x="140" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#666666">Enamel Pin + Die-Cut Sticker</text>
+    <text x="140" y="256" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="10" fill="#555555">1.25" pin / 3" sticker</text>
+  </g>
+
+  <!-- Right panel — design info -->
+  <g transform="translate(660, 60)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="16" fill="#00FF41" letter-spacing="4">DESIGN 06 OF 06</text>
+    <text x="0" y="55" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="64" fill="#F5F5F5" letter-spacing="10">BARA</text>
+    <rect x="330" y="30" width="4" height="30" fill="#00FF41" opacity="0.7"/>
+
+    <text x="0" y="100" font-family="'Inter', sans-serif" font-weight="400" font-size="16" fill="#888888">The Monolith wordmark.</text>
+    <text x="0" y="125" font-family="'Inter', sans-serif" font-weight="400" font-size="16" fill="#888888">Flat-topped A. Geometric precision.</text>
+    <text x="0" y="150" font-family="'Inter', sans-serif" font-weight="400" font-size="16" fill="#888888">Every product. Every touchpoint.</text>
+
+    <line x1="0" y1="185" x2="200" y2="185" stroke="#222222" stroke-width="1"/>
+
+    <text x="0" y="220" font-family="'Inter', sans-serif" font-weight="400" font-size="13" fill="#666666">4 products / 3 colorways / DTG + embroidery</text>
+    <text x="0" y="245" font-family="'Inter', sans-serif" font-weight="400" font-size="13" fill="#666666">Enamel pin: hard enamel, matte black nickel</text>
+    <text x="0" y="270" font-family="'Inter', sans-serif" font-weight="400" font-size="13" fill="#666666">Sticker: 3" matte vinyl die-cut</text>
+  </g>
+
+  <!-- BARA footer -->
+  <text x="1120" y="630" text-anchor="end" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18" fill="#F5F5F5" letter-spacing="4" opacity="0.8">BARA</text>
+  <text x="1120" y="650" text-anchor="end" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="#555555">Drop 0: "Hello, World"</text>
+</svg>

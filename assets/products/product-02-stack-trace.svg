@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BARA Product Render — Design 2: "The Stack Trace"
+  Format: Instagram (1080x1080)
+  View: Front view — BARA wordmark left chest (carousel slide 3)
+  Creative Director: Pixel | 2026-03-30
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+    </style>
+    <linearGradient id="fabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="50%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#0A0A0A"/>
+
+  <!-- Hoodie front silhouette -->
+  <g transform="translate(240, 50) scale(0.95)">
+    <path d="
+      M 200,10 L 150,10 C 130,10 110,20 100,40 L 30,100 L -10,170 L 60,210 L 110,150
+      L 110,550 L 500,550 L 500,150 L 550,210 L 620,170 L 580,100
+      L 510,40 C 500,20 480,10 460,10 L 410,10
+      C 390,30 360,50 305,50 C 250,50 220,30 200,10 Z
+    " fill="url(#fabric)" stroke="#252525" stroke-width="1"/>
+
+    <!-- Hood -->
+    <path d="
+      M 200,10 C 180,-10 170,-40 175,-70 C 180,-100 200,-120 240,-130
+      C 270,-135 300,-135 330,-130
+      C 370,-120 390,-100 395,-70 C 400,-40 390,-10 410,10
+    " fill="#1C1C1C" stroke="#252525" stroke-width="1"/>
+    <path d="
+      M 210,5 C 195,-10 188,-35 192,-60 C 196,-85 210,-100 240,-108
+      C 265,-113 300,-113 330,-108
+      C 360,-100 374,-85 378,-60 C 382,-35 375,-10 400,5
+    " fill="none" stroke="#222222" stroke-width="0.8"/>
+
+    <!-- Pocket -->
+    <path d="M 170,330 L 170,420 C 170,440 190,450 210,450 L 400,450 C 420,450 440,440 440,420 L 440,330"
+          fill="none" stroke="#222222" stroke-width="0.8"/>
+    <line x1="305" y1="50" x2="305" y2="330" stroke="#222222" stroke-width="0.6"/>
+
+    <!-- Fold shadows -->
+    <path d="M 110,200 L 110,400" stroke="#161616" stroke-width="10" opacity="0.2"/>
+    <path d="M 500,200 L 500,400" stroke="#161616" stroke-width="10" opacity="0.2"/>
+
+    <!-- BARA wordmark left chest — Snow White -->
+    <text x="155" y="135" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="22" fill="#F5F5F5" letter-spacing="6">BARA</text>
+  </g>
+
+  <!-- Annotation -->
+  <text x="540" y="700" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="16" fill="#555555">Front: BARA wordmark in Snow White / Left chest</text>
+  <text x="540" y="725" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#444444">Full back print on reverse</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="960" width="1080" height="120" fill="#0A0A0A" opacity="0.85"/>
+  <text x="60" y="1005" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="28" fill="#00FF41">02</text>
+  <text x="115" y="1005" font-family="'Inter', sans-serif" font-weight="600" font-size="18" fill="#E0E0E0">The Stack Trace — Front</text>
+  <text x="60" y="1035" font-family="'Inter', sans-serif" font-weight="400" font-size="13" fill="#666666">400gsm French Terry / Carbon Black / BARA wordmark left chest</text>
+  <text x="1020" y="1005" text-anchor="end" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20" fill="#F5F5F5" letter-spacing="4" opacity="0.8">BARA</text>
+</svg>

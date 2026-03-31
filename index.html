@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>BARA — Premium Outdoor Gear for Developers</title>
+  <meta name="description" content="Compile. Deploy. Summit. Heavyweight hoodies, premium tees, and headwear for developers who go outside. First drop coming soon.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wearbara.com/">
+  <meta property="og:title" content="BARA — Premium Outdoor Gear for Developers">
+  <meta property="og:description" content="Compile. Deploy. Summit. Heavyweight hoodies, premium tees, and headwear for developers who go outside. First drop coming soon.">
+  <!-- OG image: SVG source at /assets/og-image.svg (from Pixel Week 7).
+       Deploy step: export SVG → JPEG at 1200x630, host at /assets/og-image.jpg.
+       Social platforms require raster format for og:image previews. -->
+  <meta property="og:image" content="https://wearbara.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@BARAoutdoors">
+  <meta name="twitter:title" content="BARA — Premium Outdoor Gear for Developers">
+  <meta name="twitter:description" content="Compile. Deploy. Summit. First drop coming soon.">
+  <meta name="twitter:image" content="https://wearbara.com/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/bara-cursor-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Deferred stylesheet -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- Inline Critical CSS (above-fold) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --carbon-black: #1A1A1A;
+      --summit-white: #F5F5F0;
+      --terminal-green: #00FF41;
+      --forest-dark: #1B3A2D;
+      --ridgeline-tan: #C4A97D;
+      --heather-slate: #4A4E57;
+      --error-red: #FF4444;
+      --page-bg: #0A0A0F;
+      --section-bg-alt: #1A1A2E;
+      --text-primary: #EAEAEA;
+      --text-secondary: #8B8B9E;
+      --accent-warm: #C4A77D;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--page-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 80px,
+          rgba(0, 255, 65, 0.015) 80px,
+          rgba(0, 255, 65, 0.015) 81px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 80px,
+          rgba(0, 255, 65, 0.015) 80px,
+          rgba(0, 255, 65, 0.015) 81px
+        );
+      pointer-events: none;
+    }
+
+    .hero-headline {
+      font: 700 clamp(36px, 6vw, 64px)/1.1 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--summit-white);
+      margin-bottom: 16px;
+    }
+
+    .hero-subheadline {
+      font: 400 clamp(16px, 2.5vw, 20px)/1.5 'Inter', sans-serif;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin-bottom: 8px;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 480px;
+      width: 100%;
+      margin: 32px auto 0;
+    }
+
+    .email-form input[type="email"] {
+      flex: 1;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      color: var(--summit-white);
+      font: 400 16px 'JetBrains Mono', monospace;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .email-form input[type="email"]::placeholder { color: var(--text-secondary); }
+
+    .email-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--terminal-green);
+      box-shadow: 0 0 0 1px var(--terminal-green);
+    }
+
+    .email-form button {
+      padding: 16px 28px;
+      background: var(--terminal-green);
+      color: var(--carbon-black);
+      font: 700 16px 'Inter', sans-serif;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .email-form button:hover { background: #00cc34; }
+    .email-form button:focus-visible {
+      outline: 2px solid var(--summit-white);
+      outline-offset: 2px;
+    }
+
+    .form-microcopy {
+      font: 400 14px/1.5 'Inter', sans-serif;
+      color: var(--text-secondary);
+      margin-top: 12px;
+    }
+
+    .form-success {
+      display: none;
+      color: var(--terminal-green);
+      font: 700 16px 'JetBrains Mono', monospace;
+      margin-top: 16px;
+    }
+
+    .form-error {
+      display: none;
+      color: var(--error-red);
+      font: 400 14px 'Inter', sans-serif;
+      margin-top: 8px;
+    }
+
+    .hero-showcase {
+      margin-top: 48px;
+      width: min(90vw, 800px);
+      height: auto;
+      border-radius: 8px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-wordmark {
+      margin-top: 32px;
+      opacity: 0.6;
+      width: clamp(100px, 15vw, 140px);
+      height: auto;
+    }
+
+    @media (max-width: 480px) {
+      .email-form { flex-direction: column; gap: 12px; }
+      .email-form input[type="email"] {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+      }
+      .email-form button { border-radius: 4px; min-height: 48px; }
+    }
+  </style>
+
+  <!-- GA4 — async, non-render-blocking -->
+  <!-- PLACEHOLDER: Replace G-XXXXXXXXXX with actual GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Meta Pixel — async, non-render-blocking -->
+  <!-- PLACEHOLDER: Replace PIXEL_ID_HERE with actual Meta Pixel ID -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: HERO — Above the fold            -->
+  <!-- ============================================ -->
+  <section class="hero" id="top">
+    <h1 class="hero-headline" id="headline">Compile. Deploy. Summit.</h1>
+    <p class="hero-subheadline" id="subheadline">Premium outdoor gear for developers.<br>First drop coming soon.</p>
+
+    <!-- Email Capture Form -->
+    <!-- NOTE: Replace with Klaviyo embedded form snippet once account is created -->
+    <form class="email-form" id="email-capture" action="#" method="POST" novalidate>
+      <input
+        type="email"
+        name="email"
+        placeholder="your@email.dev"
+        required
+        aria-label="Email address"
+        autocomplete="email"
+        id="email-input"
+      >
+      <button type="submit" id="cta-button">Get Early Access</button>
+    </form>
+    <p class="form-microcopy" id="microcopy">No spam. Just launch day access + a look at the collection before anyone else.</p>
+    <p class="form-success" id="form-success" role="status" aria-live="polite">You're in. Check your inbox.</p>
+    <p class="form-error" id="form-error" role="alert" aria-live="assertive"></p>
+
+    <!-- Hero Product Showcase -->
+    <img
+      src="/assets/landing-hero-mockup.svg"
+      alt="BARA Drop 0 collection — heavyweight hoodie, 404 Trail Not Found tee, and elevation profile crewneck arranged on dark background"
+      class="hero-showcase"
+      width="1200"
+      height="600"
+      loading="eager"
+      fetchpriority="high"
+    >
+
+    <!-- Wordmark -->
+    <img src="/assets/bara-wordmark.svg" alt="BARA" class="hero-wordmark" width="140" height="40" loading="eager">
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: THE PROBLEM                       -->
+  <!-- ============================================ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <h2 class="section-headline">Developer apparel has two modes.</h2>
+      <div class="two-col">
+        <div class="col">
+          <h3 class="col-title">Camp 1: Conference Swag</h3>
+          <p class="body-text">Free Gildan. Boxy fit. Logo from a startup that pivoted twice. Faded after three washes. You keep it because it was free. You never wear it because it's bad.</p>
+        </div>
+        <div class="col">
+          <h3 class="col-title">Camp 2: Premium Outdoor</h3>
+          <p class="body-text">Patagonia. Arc'teryx. Great quality. Zero personality. Says nothing about who you are or what you build.</p>
+        </div>
+      </div>
+      <p class="gap-statement code-text">BARA sits in the gap.</p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: WHAT WE'RE BUILDING               -->
+  <!-- ============================================ -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-headline">Gear for people who push code<br>and push summits.</h2>
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Mountain / Premium icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 38L18 10L26 24L30 18L44 38H4Z" stroke="#00FF41" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+              <line x1="12" y1="38" x2="36" y2="38" stroke="#00FF41" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Premium Blanks</h3>
+          <p class="body-text">400gsm French terry hoodies. Tri-blend tees. Waxed cotton caps. Conference swag this is not.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Terminal / Code icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="32" rx="3" stroke="#00FF41" stroke-width="1.5" fill="none"/>
+              <polyline points="12,20 20,26 12,32" stroke="#00FF41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <line x1="24" y1="32" x2="36" y2="32" stroke="#00FF41" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Designs That Mean Something</h3>
+          <p class="body-text">Stack traces hidden in topo maps. Terminal commands on fleece. Data viz that tells two stories. Subtle enough to wear anywhere.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Leaf / Sustainability icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 40C12 40 12 20 32 8C32 8 36 28 16 36" stroke="#00FF41" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <path d="M12 40C20 32 28 20 32 8" stroke="#00FF41" stroke-width="1" stroke-dasharray="2,3" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Made When You Order</h3>
+          <p class="body-text">Print-on-demand means zero waste. Every piece is made for you, not pulled from a warehouse shelf.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: COLLECTION PREVIEW                -->
+  <!-- ============================================ -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <h2 class="section-headline code-text">Drop 0: "Hello, World"</h2>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-01-compile-deploy-summit.svg" alt="Compile Deploy Summit hoodie — Terminal Green text on Carbon Black heavyweight French terry" class="product-image" loading="lazy" width="1200" height="675">
+          </div>
+          <h3 class="product-name">Compile. Deploy. Summit.</h3>
+          <p class="product-desc">The brand anchor. Three words on heavyweight French terry.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-02-stack-trace.svg" alt="The Stack Trace hoodie — topo map meets call stack design on Carbon Black" class="product-image" loading="lazy" width="1080" height="1080">
+          </div>
+          <h3 class="product-name">The Stack Trace</h3>
+          <p class="product-desc">Topo map meets call stack. The conversation starter.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-03-git-push.svg" alt="git push origin summit tee — monospace text on Carbon Black tee and charcoal crewneck" class="product-image" loading="lazy" width="1200" height="675">
+          </div>
+          <h3 class="product-name">git push origin summit</h3>
+          <p class="product-desc">One line of monospace. Left chest. The subtlest dev tee you'll own.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-04-elevation-profile.svg" alt="Elevation Profile tee — trail elevation chart rendered as data visualization on Carbon Black" class="product-image" loading="lazy" width="1200" height="675">
+          </div>
+          <h3 class="product-name">Elevation Profile</h3>
+          <p class="product-desc">Trail elevation chart or Grafana dashboard? Yes.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-05-404-trail.svg" alt="404 Trail Not Found tee — HTTP error page design on Carbon Black tee" class="product-image" loading="lazy" width="1200" height="675">
+          </div>
+          <h3 class="product-name">404: Trail Not Found</h3>
+          <p class="product-desc">The route you requested does not exist. Bushwhack at your own risk.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/assets/products/product-06-bara-wordmark.svg" alt="BARA Wordmark collection — logo across tee, hoodie, cap, and beanie in grid layout" class="product-image" loading="lazy" width="1200" height="675">
+          </div>
+          <h3 class="product-name">BARA Wordmark</h3>
+          <p class="product-desc">Camp cap. Beanie. Pin. Four letters, no explanation needed.</p>
+        </div>
+
+      </div>
+      <p class="collection-footnote body-text">
+        Plus a sticker pack and enamel pin.<br>
+        <span class="text-secondary">Because your Nalgene has free real estate.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4.5: LIFESTYLE — Gear in Context     -->
+  <!-- ============================================ -->
+  <section class="lifestyle" id="lifestyle">
+    <div class="container">
+      <h2 class="section-headline">From desk to peak.</h2>
+      <div class="lifestyle-grid">
+
+        <div class="lifestyle-card lifestyle-card--wide">
+          <img
+            src="/assets/lifestyle/lifestyle-summit-morning-hero.svg"
+            alt="Developer in BARA hoodie at mountain summit during dawn, laptop closed, trail behind"
+            class="lifestyle-image"
+            loading="lazy"
+            width="1200"
+            height="800"
+          >
+          <p class="lifestyle-caption code-text">summit_reached = True</p>
+        </div>
+
+        <div class="lifestyle-card">
+          <img
+            src="/assets/lifestyle/lifestyle-desk-to-peak-tw.svg"
+            alt="Split view — developer at standing desk on left, same developer on trail in BARA gear on right"
+            class="lifestyle-image"
+            loading="lazy"
+            width="1200"
+            height="675"
+          >
+          <p class="lifestyle-caption code-text">git stash && go outside</p>
+        </div>
+
+        <div class="lifestyle-card">
+          <img
+            src="/assets/lifestyle/lifestyle-basecamp-code-ig.svg"
+            alt="Developer at campsite with laptop on camp table, wearing BARA tee, mountains in background"
+            class="lifestyle-image"
+            loading="lazy"
+            width="1080"
+            height="1080"
+          >
+          <p class="lifestyle-caption code-text">basecamp.init()</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: FOUNDING 100                      -->
+  <!-- ============================================ -->
+  <section class="founding-100" id="founding-100">
+    <div class="container">
+      <h2 class="section-headline">The first 100 orders.</h2>
+      <div class="f100-content">
+        <ul class="f100-benefits">
+          <li>Free shipping on your first order</li>
+          <li>Exclusive "Founding Member" sticker (never sold separately)</li>
+          <li>Early access to every future drop &mdash; 24 hours before public</li>
+          <li>Your number in the BARA README.md</li>
+        </ul>
+        <p class="caption">No code required. The first 100 orders qualify automatically.</p>
+      </div>
+      <a href="#email-capture" class="cta-button">Get Early Access</a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: FOOTER                            -->
+  <!-- ============================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <img src="/assets/bara-wordmark.svg" alt="BARA" class="footer-wordmark" width="80" height="22" loading="lazy">
+      </div>
+      <div class="footer-center">
+        <div class="social-links">
+          <a href="https://twitter.com/BARAoutdoors" aria-label="Follow BARA on Twitter/X" target="_blank" rel="noopener noreferrer">
+            <!-- X / Twitter icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/BARAoutdoors" aria-label="Follow BARA on Instagram" target="_blank" rel="noopener noreferrer">
+            <!-- Instagram icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="caption">Built by developers. For developers.</p>
+      </div>
+    </div>
+    <p class="footer-legal caption">&copy; 2026 BARA &middot; We'll never sell your email or send you spam.</p>
+  </footer>
+
+  <!-- Scripts — deferred, non-render-blocking -->
+  <script src="scripts.js" defer></script>
+
+</body>
+</html>

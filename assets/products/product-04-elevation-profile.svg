@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BARA Product Render — Design 4: "Elevation Profile"
+  Format: Twitter (1200x675)
+  View: Crewneck front — center chest data viz
+  Creative Director: Pixel | 2026-03-30
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+    </style>
+    <linearGradient id="fabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="50%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+    <linearGradient id="gradient-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF41" stop-opacity="0.05"/>
+      <stop offset="50%" stop-color="#00FF41" stop-opacity="0.12"/>
+      <stop offset="85%" stop-color="#00FF41" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00FF41" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0A0A0A"/>
+
+  <!-- Grid texture -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <line x1="40" y1="0" x2="40" y2="40" stroke="#111111" stroke-width="0.5"/>
+    <line x1="0" y1="40" x2="40" y2="40" stroke="#111111" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="675" fill="url(#grid)" opacity="0.25"/>
+
+  <!-- Crewneck silhouette -->
+  <g transform="translate(370, 25) scale(0.74)">
+    <path d="
+      M 200,0 L 160,0 C 140,0 120,10 110,30 L 40,80 L 0,140 L 60,180 L 110,130
+      L 110,500 L 500,500 L 500,130 L 550,180 L 610,140 L 570,80
+      L 500,30 C 490,10 470,0 450,0 L 410,0
+      C 390,20 360,35 305,35 C 250,35 220,20 200,0 Z
+    " fill="url(#fabric)" stroke="#252525" stroke-width="1"/>
+    <path d="M 200,0 C 220,20 250,35 305,35 C 360,35 390,20 410,0" fill="none" stroke="#252525" stroke-width="1.5"/>
+    <path d="M 195,-4 C 215,16 250,30 305,30 C 360,30 395,16 415,-4" fill="none" stroke="#282828" stroke-width="0.8"/>
+
+    <!-- Fold shadows -->
+    <path d="M 110,180 L 110,380" stroke="#151515" stroke-width="8" opacity="0.2"/>
+    <path d="M 500,180 L 500,380" stroke="#151515" stroke-width="8" opacity="0.2"/>
+
+    <!-- === ELEVATION PROFILE DATA VIZ === -->
+    <g transform="translate(135, 130)">
+      <!-- Y-axis -->
+      <line x1="0" y1="0" x2="0" y2="210" stroke="#555555" stroke-width="0.8"/>
+      <!-- Y labels (dual) -->
+      <text x="-5" y="5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">14k ft</text>
+      <text x="-5" y="55" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">10k</text>
+      <text x="-5" y="105" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">7k</text>
+      <text x="-5" y="155" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">3k</text>
+      <text x="-5" y="210" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">0</text>
+
+      <!-- Right Y-axis (commits/ms) -->
+      <line x1="340" y1="0" x2="340" y2="210" stroke="#555555" stroke-width="0.8"/>
+      <text x="345" y="5" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">500ms</text>
+      <text x="345" y="105" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">250ms</text>
+      <text x="345" y="210" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">0ms</text>
+
+      <!-- X-axis -->
+      <line x1="0" y1="210" x2="340" y2="210" stroke="#555555" stroke-width="0.8"/>
+      <text x="0" y="220" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">0 mi</text>
+      <text x="170" y="220" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">commits</text>
+      <text x="340" y="220" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">8 mi</text>
+
+      <!-- Grid lines -->
+      <line x1="0" y1="52" x2="340" y2="52" stroke="#333333" stroke-width="0.3" stroke-dasharray="2,4"/>
+      <line x1="0" y1="105" x2="340" y2="105" stroke="#333333" stroke-width="0.3" stroke-dasharray="2,4"/>
+      <line x1="0" y1="155" x2="340" y2="155" stroke="#333333" stroke-width="0.3" stroke-dasharray="2,4"/>
+
+      <!-- Gradient fill under curve -->
+      <path d="M 0,210 L 20,195 L 60,170 L 100,140 L 140,110 L 180,135 L 220,85 L 260,55 L 300,25 L 340,190 L 340,210 Z" fill="url(#gradient-fill)"/>
+
+      <!-- Elevation curve -->
+      <path d="M 0,210 L 20,195 L 60,170 L 100,140 L 140,110 L 180,135 L 220,85 L 260,55 L 300,25 L 340,190" fill="none" stroke="#00FF41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Data points with annotations -->
+      <circle cx="0" cy="210" r="3" fill="#00FF41"/>
+      <text x="5" y="205" font-family="'JetBrains Mono', monospace" font-size="5" fill="#00FF41">trailhead</text>
+
+      <circle cx="100" cy="140" r="3" fill="#00FF41"/>
+      <text x="105" y="135" font-family="'JetBrains Mono', monospace" font-size="5" fill="#00FF41">standup()</text>
+
+      <circle cx="180" cy="135" r="3" fill="#FF6B6B"/>
+      <text x="185" y="130" font-family="'JetBrains Mono', monospace" font-size="5" fill="#FF6B6B">false_summit</text>
+
+      <circle cx="220" cy="85" r="3" fill="#555555"/>
+      <text x="225" y="80" font-family="'JetBrains Mono', monospace" font-size="5" fill="#555555">rollback</text>
+
+      <circle cx="300" cy="25" r="4" fill="#00FF41" stroke="#0D0D0D" stroke-width="1.5"/>
+      <text x="280" y="18" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="700" fill="#00FF41">SUMMIT</text>
+
+      <!-- Legend -->
+      <text x="160" y="245" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="5" fill="#444444">summit_profile.py</text>
+    </g>
+  </g>
+
+  <!-- Bottom info -->
+  <text x="50" y="630" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="14" fill="#00FF41" opacity="0.7">04</text>
+  <text x="80" y="630" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#888888">Elevation Profile</text>
+  <text x="50" y="650" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="#555555">Data visualization / Crewneck center chest / Carbon Black</text>
+
+  <text x="1120" y="630" text-anchor="end" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18" fill="#F5F5F5" letter-spacing="4" opacity="0.8">BARA</text>
+  <text x="1120" y="650" text-anchor="end" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="#555555">Drop 0: "Hello, World"</text>
+</svg>

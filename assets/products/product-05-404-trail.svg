@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BARA Product Render — Design 5: "404: Trail Not Found"
+  Format: Twitter (1200x675)
+  View: Tee front — center chest
+  Creative Director: Pixel | 2026-03-30
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+    </style>
+    <linearGradient id="fabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="50%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0A0A0A"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <line x1="40" y1="0" x2="40" y2="40" stroke="#111111" stroke-width="0.5"/>
+    <line x1="0" y1="40" x2="40" y2="40" stroke="#111111" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="675" fill="url(#grid)" opacity="0.25"/>
+
+  <!-- Tee silhouette -->
+  <g transform="translate(370, 20) scale(0.73)">
+    <path d="
+      M 200,0 L 160,0 C 140,0 120,10 110,30 L 40,80 L 0,140 L 60,180 L 110,130
+      L 110,500 L 500,500 L 500,130 L 550,180 L 610,140 L 570,80
+      L 500,30 C 490,10 470,0 450,0 L 410,0
+      C 390,20 360,35 305,35 C 250,35 220,20 200,0 Z
+    " fill="url(#fabric)" stroke="#252525" stroke-width="1"/>
+    <path d="M 200,0 C 220,20 250,35 305,35 C 360,35 390,20 410,0" fill="none" stroke="#252525" stroke-width="1.5"/>
+
+    <path d="M 110,180 L 110,380" stroke="#141414" stroke-width="8" opacity="0.2"/>
+    <path d="M 500,180 L 500,380" stroke="#141414" stroke-width="8" opacity="0.2"/>
+
+    <!-- === 404 DESIGN === -->
+    <g transform="translate(135, 110)">
+      <!-- HTTP header -->
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-weight="400" font-size="8" fill="#555555">HTTP/1.1</text>
+
+      <!-- Large 404 -->
+      <text x="0" y="80" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="80" fill="#F5F5F5" letter-spacing="4">404</text>
+
+      <!-- Trail Not Found -->
+      <text x="0" y="115" font-family="'JetBrains Mono', monospace" font-weight="400" font-size="18" fill="#C0C0C0" letter-spacing="1">Trail Not Found</text>
+
+      <!-- Bushwhack line -->
+      <text x="0" y="155" font-family="'JetBrains Mono', monospace" font-weight="400" font-size="10" fill="#555555" letter-spacing="0.5">Bushwhack at your own risk.</text>
+
+      <!-- Faint mountain ridgeline -->
+      <path d="M -20,200 L 30,180 L 60,170 L 100,150 L 130,155 L 160,140 L 190,145 L 220,130 L 250,120 L 280,135 L 310,125 L 340,140 L 370,145 L 400,150 L 430,155 L 460,160" fill="none" stroke="#F5F5F5" stroke-width="0.6" opacity="0.08"/>
+    </g>
+  </g>
+
+  <!-- Bottom info -->
+  <text x="50" y="630" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="14" fill="#00FF41" opacity="0.7">05</text>
+  <text x="80" y="630" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#888888">404: Trail Not Found</text>
+  <text x="50" y="650" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="#555555">The humor piece / Center chest DTG / Carbon Black</text>
+
+  <text x="1120" y="630" text-anchor="end" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18" fill="#F5F5F5" letter-spacing="4" opacity="0.8">BARA</text>
+  <text x="1120" y="650" text-anchor="end" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="#555555">Drop 0: "Hello, World"</text>
+</svg>

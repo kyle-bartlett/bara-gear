@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!--
+    Lifestyle Mockup: "Summit Morning"
+    ===================================
+    Purpose: Landing page hero + social wide format
+    Size: 1200x800 (hero banner)
+    Scene: Figure at mountain summit at dawn, wearing BARA hoodie,
+           looking out at mountain range. Backpack at feet.
+    Mood: Aspirational, quiet power, the crossover moment
+    For: Blaze (landing page visual + social), Scout (landing page hero)
+  -->
+
+  <defs>
+    <!-- Sky gradient — pre-dawn blue to warm horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0E1A"/>
+      <stop offset="45%" stop-color="#0D1528"/>
+      <stop offset="70%" stop-color="#1A1830"/>
+      <stop offset="85%" stop-color="#2D1F2A"/>
+      <stop offset="95%" stop-color="#3D2520"/>
+      <stop offset="100%" stop-color="#4A2A18"/>
+    </linearGradient>
+
+    <!-- Horizon glow -->
+    <radialGradient id="horizon-glow" cx="0.5" cy="0.85" r="0.5" fx="0.5" fy="0.85">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#FF6B35" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ground gradient -->
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+
+    <!-- Subtle atmosphere haze -->
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0E1A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Star twinkle filter -->
+    <filter id="star-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <rect width="1200" height="800" fill="url(#horizon-glow)"/>
+
+  <!-- Stars (sparse, pre-dawn) -->
+  <g opacity="0.4" filter="url(#star-glow)">
+    <circle cx="120" cy="60" r="1.2" fill="#FFFFFF"/>
+    <circle cx="340" cy="95" r="0.8" fill="#FFFFFF"/>
+    <circle cx="520" cy="40" r="1" fill="#FFFFFF"/>
+    <circle cx="780" cy="70" r="0.9" fill="#FFFFFF"/>
+    <circle cx="950" cy="110" r="1.1" fill="#FFFFFF"/>
+    <circle cx="1080" cy="55" r="0.7" fill="#FFFFFF"/>
+    <circle cx="200" cy="140" r="0.6" fill="#FFFFFF"/>
+    <circle cx="680" cy="130" r="0.8" fill="#FFFFFF"/>
+    <circle cx="1150" cy="130" r="0.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Far mountain range (most distant — faintest) -->
+  <polygon points="0,520 80,440 160,470 250,410 340,450 420,390 500,430 560,380 640,420 720,370 800,400 880,360 960,410 1040,380 1120,430 1200,400 1200,520"
+           fill="#151820" opacity="0.7"/>
+
+  <!-- Mid mountain range -->
+  <polygon points="0,560 60,490 140,520 200,460 280,500 360,440 440,480 520,430 600,470 680,420 740,460 820,400 900,450 960,430 1040,470 1120,440 1200,480 1200,560"
+           fill="#121620" opacity="0.85"/>
+
+  <!-- Near mountain range -->
+  <polygon points="0,600 100,530 180,560 240,510 340,540 420,490 500,530 580,500 640,530 720,480 800,520 880,500 960,540 1060,510 1140,550 1200,520 1200,600"
+           fill="#0F1318"/>
+
+  <!-- Horizon line glow -->
+  <line x1="0" y1="520" x2="1200" y2="520" stroke="#4A2A18" stroke-width="1" opacity="0.3"/>
+
+  <!-- Foreground ridge (where the figure stands) -->
+  <polygon points="0,650 50,620 120,640 200,610 300,630 400,600 500,620 550,595 600,610 700,590 780,615 860,600 940,625 1020,605 1100,630 1200,615 1200,800 0,800"
+           fill="url(#ground)"/>
+
+  <!-- Rocky texture on foreground -->
+  <g opacity="0.15">
+    <rect x="380" y="620" width="18" height="6" fill="#2A2A2A" rx="1"/>
+    <rect x="520" y="605" width="12" height="4" fill="#2A2A2A" rx="1"/>
+    <rect x="650" y="615" width="20" height="5" fill="#2A2A2A" rx="1"/>
+    <rect x="750" y="625" width="14" height="5" fill="#2A2A2A" rx="1"/>
+    <rect x="900" y="610" width="16" height="4" fill="#2A2A2A" rx="1"/>
+  </g>
+
+  <!-- === FIGURE: Person at summit wearing BARA hoodie === -->
+  <g transform="translate(540, 340)">
+    <!-- Figure silhouette — standing, looking out at range -->
+    <!-- Legs -->
+    <rect x="18" y="195" width="18" height="75" fill="#111111" rx="3"/>
+    <rect x="42" y="195" width="18" height="75" fill="#111111" rx="3"/>
+
+    <!-- Boots -->
+    <rect x="14" y="262" width="26" height="12" fill="#0D0D0D" rx="2"/>
+    <rect x="38" y="262" width="26" height="12" fill="#0D0D0D" rx="2"/>
+
+    <!-- Hoodie body (BARA product — slightly lighter than silhouette) -->
+    <path d="M 10,100 Q 10,88 20,85 L 58,85 Q 68,88 68,100 L 68,200 Q 68,205 65,205 L 13,205 Q 10,205 10,200 Z"
+          fill="#1C1C1C" stroke="#2A2A2A" stroke-width="0.5"/>
+
+    <!-- Hood (up — it's cold at dawn) -->
+    <path d="M 20,85 Q 20,55 39,45 Q 58,55 58,85"
+          fill="#1C1C1C" stroke="#2A2A2A" stroke-width="0.5"/>
+
+    <!-- Head visible inside hood -->
+    <ellipse cx="39" cy="62" rx="12" ry="14" fill="#111111"/>
+
+    <!-- Arms -->
+    <path d="M 10,100 Q -5,110 -8,140 Q -10,160 -5,170"
+          fill="none" stroke="#1C1C1C" stroke-width="16" stroke-linecap="round"/>
+    <path d="M 68,100 Q 83,110 86,140 Q 88,160 83,170"
+          fill="none" stroke="#1C1C1C" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Hoodie pocket line -->
+    <line x1="22" y1="155" x2="56" y2="155" stroke="#2A2A2A" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- BARA hoodie left chest — Compile.Deploy.Summit. -->
+    <g transform="translate(14, 100)">
+      <text font-family="'JetBrains Mono', monospace" font-size="5" font-weight="700" fill="#00FF41">Compile.</text>
+      <text y="7" font-family="'JetBrains Mono', monospace" font-size="5" font-weight="700" fill="#00FF41">Deploy.</text>
+      <text y="14" font-family="'JetBrains Mono', monospace" font-size="5" font-weight="700" fill="#00FF41">Summit.</text>
+    </g>
+
+    <!-- Cursor glow on hoodie (subtle Terminal Green accent) -->
+    <rect x="48" y="98" width="2" height="10" fill="#00FF41" opacity="0.3" rx="0.5"/>
+  </g>
+
+  <!-- Backpack at figure's feet (right side) -->
+  <g transform="translate(650, 595)">
+    <rect x="0" y="5" width="30" height="40" rx="5" fill="#151515" stroke="#222222" stroke-width="0.8"/>
+    <rect x="3" y="0" width="24" height="8" rx="3" fill="#151515" stroke="#222222" stroke-width="0.5"/>
+    <line x1="10" y1="12" x2="10" y2="35" stroke="#222222" stroke-width="0.5"/>
+    <line x1="20" y1="12" x2="20" y2="35" stroke="#222222" stroke-width="0.5"/>
+    <!-- Carabiner with Terminal Green accent -->
+    <circle cx="32" cy="20" r="4" fill="none" stroke="#00FF41" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Trekking pole leaning against pack -->
+  <line x1="645" y1="570" x2="635" y2="635" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Atmosphere haze overlay (grounds the bottom) -->
+  <rect width="1200" height="800" fill="url(#haze)" opacity="0.3"/>
+
+  <!-- Breath vapor in cold air (subtle) -->
+  <g transform="translate(590, 390)" opacity="0.08">
+    <ellipse cx="0" cy="0" rx="20" ry="6" fill="#FFFFFF"/>
+    <ellipse cx="15" cy="-5" rx="12" ry="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Bottom overlay: brand text -->
+  <g transform="translate(600, 755)">
+    <text text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#444444" letter-spacing="8">WHERE CODE MEETS ALTITUDE</text>
+  </g>
+
+  <!-- Bottom-right: BARA wordmark (subtle) -->
+  <g transform="translate(1100, 760)" opacity="0.3">
+    <text text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="4">BARA</text>
+    <rect x="24" y="-11" width="3" height="14" fill="#00FF41" rx="0.5"/>
+  </g>
+</svg>

@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!--
+    Lifestyle Mockup: "Desk to Peak"
+    =================================
+    Purpose: Social wide format (Twitter/Reddit/LinkedIn)
+    Size: 1200x675
+    Scene: Split composition — left: developer desk with monitor + code,
+           right: mountain trail vista. BARA hoodie draped across the divide.
+           Visual metaphor for the dual life.
+    Mood: Clean, aspirational, "both worlds" identity
+    For: Blaze (social content + ads), Scout (landing page alternate)
+  -->
+
+  <defs>
+    <!-- Left side: desk/indoor -->
+    <linearGradient id="desk-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D0D0D"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+
+    <!-- Right side: outdoor sky -->
+    <linearGradient id="trail-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1628"/>
+      <stop offset="50%" stop-color="#162040"/>
+      <stop offset="80%" stop-color="#1E2845"/>
+      <stop offset="100%" stop-color="#253050"/>
+    </linearGradient>
+
+    <!-- Divider fade -->
+    <linearGradient id="divider-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D0D0D"/>
+      <stop offset="50%" stop-color="#0D0D0D" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Monitor glow -->
+    <radialGradient id="monitor-glow" cx="0.3" cy="0.4" r="0.3">
+      <stop offset="0%" stop-color="#00FF41" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#00FF41" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- === LEFT HALF: Developer Desk === -->
+  <rect x="0" y="0" width="600" height="675" fill="url(#desk-bg)"/>
+  <rect x="0" y="0" width="600" height="675" fill="url(#monitor-glow)"/>
+
+  <!-- Subtle grid (desk side) -->
+  <g opacity="0.05">
+    <line x1="0" y1="0" x2="0" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="60" y1="0" x2="60" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="120" y1="0" x2="120" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="180" y1="0" x2="180" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="240" y1="0" x2="240" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="360" y1="0" x2="360" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="420" y1="0" x2="420" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="675" stroke="#333" stroke-width="0.5"/>
+    <line x1="540" y1="0" x2="540" y2="675" stroke="#333" stroke-width="0.5"/>
+  </g>
+
+  <!-- Desk surface -->
+  <rect x="0" y="430" width="620" height="245" fill="#0F0F0F"/>
+  <line x1="0" y1="430" x2="620" y2="430" stroke="#1A1A1A" stroke-width="1"/>
+
+  <!-- Monitor -->
+  <g transform="translate(80, 80)">
+    <!-- Monitor stand -->
+    <rect x="165" y="310" width="30" height="50" fill="#1A1A1A"/>
+    <rect x="130" y="355" width="100" height="8" rx="4" fill="#1A1A1A"/>
+    <!-- Monitor bezel -->
+    <rect x="20" y="0" width="320" height="210" rx="6" fill="#151515" stroke="#222222" stroke-width="1"/>
+    <!-- Screen -->
+    <rect x="30" y="10" width="300" height="190" rx="2" fill="#0A0A0A"/>
+    <!-- Code on screen -->
+    <g transform="translate(42, 22)">
+      <!-- File tabs -->
+      <rect width="60" height="12" rx="2" fill="#1A1A1A"/>
+      <text x="8" y="9" font-family="'JetBrains Mono', monospace" font-size="6" fill="#888888">summit.rs</text>
+      <rect x="65" width="55" height="12" rx="2" fill="#111111"/>
+      <text x="72" y="9" font-family="'JetBrains Mono', monospace" font-size="6" fill="#555555">main.go</text>
+
+      <!-- Line numbers + code -->
+      <g transform="translate(0, 22)" font-family="'JetBrains Mono', monospace" font-size="7">
+        <text fill="#333333">1</text>
+        <text x="20" fill="#C586C0">fn</text>
+        <text x="32" fill="#DCDCAA">push_to_peak</text>
+        <text x="98" fill="#CCCCCC">()</text>
+        <text x="110" fill="#CCCCCC">{</text>
+
+        <text y="12" fill="#333333">2</text>
+        <text x="20" y="12" fill="#C586C0">  let</text>
+        <text x="44" y="12" fill="#9CDCFE">elevation</text>
+        <text x="90" y="12" fill="#CCCCCC">=</text>
+        <text x="98" y="12" fill="#B5CEA8">14411</text>
+        <text x="124" y="12" fill="#CCCCCC">;</text>
+
+        <text y="24" fill="#333333">3</text>
+        <text x="20" y="24" fill="#C586C0">  let</text>
+        <text x="44" y="24" fill="#9CDCFE">summit</text>
+        <text x="80" y="24" fill="#CCCCCC">=</text>
+        <text x="88" y="24" fill="#CE9178">"Rainier"</text>
+        <text x="140" y="24" fill="#CCCCCC">;</text>
+
+        <text y="36" fill="#333333">4</text>
+        <text y="48" fill="#333333">5</text>
+        <text x="20" y="48" fill="#6A9955">  // deploy to peak</text>
+
+        <text y="60" fill="#333333">6</text>
+        <text x="20" y="60" fill="#9CDCFE">  route</text>
+        <text x="54" y="60" fill="#CCCCCC">.</text>
+        <text x="58" y="60" fill="#DCDCAA">ascend</text>
+        <text x="88" y="60" fill="#CCCCCC">(</text>
+        <text x="92" y="60" fill="#9CDCFE">elevation</text>
+        <text x="138" y="60" fill="#CCCCCC">);</text>
+
+        <text y="72" fill="#333333">7</text>
+        <text x="20" y="72" fill="#C586C0">  return</text>
+        <text x="60" y="72" fill="#9CDCFE"> peak</text>
+        <text x="82" y="72" fill="#CCCCCC">.</text>
+        <text x="86" y="72" fill="#DCDCAA">success</text>
+        <text x="122" y="72" fill="#CCCCCC">();</text>
+
+        <text y="84" fill="#333333">8</text>
+        <text x="20" y="84" fill="#CCCCCC">}</text>
+
+        <!-- Blinking cursor -->
+        <rect x="28" y="81" width="1.5" height="9" fill="#00FF41" opacity="0.8"/>
+      </g>
+
+      <!-- Terminal below -->
+      <g transform="translate(0, 130)">
+        <rect x="-10" y="-5" width="280" height="45" fill="#0A0A0A"/>
+        <line x1="-10" y1="-5" x2="270" y2="-5" stroke="#1A1A1A" stroke-width="0.5"/>
+        <text font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#888888">$ git push origin summit</text>
+        <text y="11" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#00FF41">Enumerating objects: 42, done.</text>
+        <text y="22" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#00FF41">remote: Deploy successful.</text>
+        <text y="33" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#888888">$ <rect x="12" y="27" width="1.5" height="7" fill="#00FF41" opacity="0.6"/></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Keyboard -->
+  <g transform="translate(130, 460)">
+    <rect width="200" height="65" rx="4" fill="#151515" stroke="#222222" stroke-width="0.5"/>
+    <!-- Key rows (simplified) -->
+    <g transform="translate(8, 8)" fill="#1A1A1A" opacity="0.5">
+      <rect width="12" height="8" rx="1"/><rect x="14" width="12" height="8" rx="1"/><rect x="28" width="12" height="8" rx="1"/>
+      <rect x="42" width="12" height="8" rx="1"/><rect x="56" width="12" height="8" rx="1"/><rect x="70" width="12" height="8" rx="1"/>
+      <rect x="84" width="12" height="8" rx="1"/><rect x="98" width="12" height="8" rx="1"/><rect x="112" width="12" height="8" rx="1"/>
+      <rect x="126" width="12" height="8" rx="1"/><rect x="140" width="12" height="8" rx="1"/><rect x="154" width="12" height="8" rx="1"/>
+      <rect x="168" width="16" height="8" rx="1"/>
+      <!-- Row 2 -->
+      <rect y="11" width="18" height="8" rx="1"/><rect x="20" y="11" width="12" height="8" rx="1"/>
+      <rect x="34" y="11" width="12" height="8" rx="1"/><rect x="48" y="11" width="12" height="8" rx="1"/>
+      <rect x="62" y="11" width="12" height="8" rx="1"/><rect x="76" y="11" width="12" height="8" rx="1"/>
+      <rect x="90" y="11" width="12" height="8" rx="1"/><rect x="104" y="11" width="12" height="8" rx="1"/>
+      <rect x="118" y="11" width="12" height="8" rx="1"/><rect x="132" y="11" width="12" height="8" rx="1"/>
+      <rect x="146" y="11" width="12" height="8" rx="1"/><rect x="160" y="11" width="24" height="8" rx="1"/>
+      <!-- Row 3 spacebar -->
+      <rect x="40" y="33" width="100" height="8" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Coffee mug on desk -->
+  <g transform="translate(40, 450)">
+    <rect width="24" height="30" rx="3" fill="#1A1A1A" stroke="#252525" stroke-width="0.6"/>
+    <path d="M 24,8 Q 34,8 34,16 Q 34,24 24,24" fill="none" stroke="#252525" stroke-width="0.6"/>
+  </g>
+
+  <!-- === RIGHT HALF: Mountain Trail === -->
+  <rect x="600" y="0" width="600" height="675" fill="url(#trail-sky)"/>
+
+  <!-- Moon -->
+  <circle cx="950" cy="100" r="25" fill="#DDDDCC" opacity="0.15"/>
+  <circle cx="955" cy="95" r="22" fill="#0E1628"/>
+
+  <!-- Far peaks -->
+  <polygon points="600,420 680,300 760,370 840,260 920,330 1000,280 1080,340 1160,310 1200,350 1200,420"
+           fill="#121830" opacity="0.8"/>
+
+  <!-- Mid peaks -->
+  <polygon points="600,460 660,360 740,400 800,320 880,380 940,340 1020,390 1100,350 1200,400 1200,460"
+           fill="#0F1525"/>
+
+  <!-- Near peak with trail switchbacks -->
+  <polygon points="600,520 700,400 800,450 900,380 980,430 1060,400 1140,440 1200,420 1200,520"
+           fill="#0D1220"/>
+
+  <!-- Trail switchbacks (subtle) -->
+  <g stroke="#333333" stroke-width="0.8" fill="none" opacity="0.3">
+    <path d="M 650,500 Q 700,480 750,490 Q 800,500 820,480"/>
+    <path d="M 680,480 Q 730,460 780,470 Q 830,480 860,460"/>
+    <path d="M 720,455 Q 770,435 820,445 Q 870,455 900,435"/>
+    <path d="M 760,430 Q 810,410 860,420 Q 910,430 940,415"/>
+  </g>
+
+  <!-- Foreground trail -->
+  <polygon points="600,520 620,510 700,530 800,515 900,535 1000,520 1100,540 1200,525 1200,675 600,675"
+           fill="#0C0F18"/>
+
+  <!-- Trail markers (cairns) -->
+  <g fill="#1A1E2A" opacity="0.4">
+    <rect x="780" y="510" width="8" height="6" rx="1"/>
+    <rect x="781" y="505" width="6" height="5" rx="1"/>
+    <rect x="782" y="501" width="4" height="4" rx="1"/>
+  </g>
+
+  <!-- === THE HOODIE: draped across the divide === -->
+  <g transform="translate(480, 400)">
+    <!-- Hoodie body — crossing from desk to trail -->
+    <path d="M 0,30 Q 20,0 60,-10 Q 100,0 140,15 Q 180,30 220,25 Q 260,20 280,30 L 280,130 Q 260,140 220,135 Q 180,130 140,140 Q 100,135 60,130 Q 20,125 0,130 Z"
+          fill="#1C1C1C" stroke="#2A2A2A" stroke-width="0.8" opacity="0.9"/>
+
+    <!-- Hood -->
+    <path d="M 50,-10 Q 50,-40 90,-50 Q 130,-40 130,-10"
+          fill="#1C1C1C" stroke="#2A2A2A" stroke-width="0.5" opacity="0.9"/>
+
+    <!-- Sleeve left (desk side) -->
+    <path d="M 0,40 Q -30,50 -50,80 Q -60,100 -50,110"
+          fill="none" stroke="#1C1C1C" stroke-width="22" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Sleeve right (trail side) -->
+    <path d="M 280,40 Q 310,50 330,80 Q 340,100 330,110"
+          fill="none" stroke="#1C1C1C" stroke-width="22" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Left chest design: Compile.Deploy.Summit. -->
+    <g transform="translate(25, 20)" opacity="0.6">
+      <text font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" fill="#00FF41">Compile.</text>
+      <text y="10" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" fill="#00FF41">Deploy.</text>
+      <text y="20" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" fill="#00FF41">Summit.</text>
+    </g>
+  </g>
+
+  <!-- Diagonal divider line (subtle) -->
+  <line x1="600" y1="0" x2="600" y2="675" stroke="#1A1A1A" stroke-width="2" opacity="0.5"/>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="635" width="1200" height="40" fill="#0D0D0D" opacity="0.8"/>
+  <text x="300" y="660" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#333333" letter-spacing="4">COMPILE. DEPLOY.</text>
+  <text x="900" y="660" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#333333" letter-spacing="4">SUMMIT.</text>
+
+  <!-- BARA wordmark bottom-center -->
+  <g transform="translate(600, 660)" opacity="0.4">
+    <text text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#FFFFFF" letter-spacing="4">BARA</text>
+    <rect x="22" y="-9" width="2.5" height="12" fill="#00FF41" rx="0.5"/>
+  </g>
+</svg>
