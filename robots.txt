@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bartstees.com/sitemap.xml
+Sitemap: https://kyle-bartlett.github.io/bara-gear/sitemap.xml
