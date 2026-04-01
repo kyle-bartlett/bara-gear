@@ -248,6 +248,66 @@
     fbq('init', 'PIXEL_ID_HERE');
     fbq('track', 'PageView');
   </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bartstees.com/#organization",
+        "name": "Bart's Tees",
+        "url": "https://bartstees.com",
+        "description": "Premium outdoor gear and apparel for developers who go outside. Heavyweight hoodies, tees, and headwear built for the terminal and the trail.",
+        "foundingDate": "2026",
+        "brand": {
+          "@type": "Brand",
+          "name": "Bart's Tees",
+          "slogan": "Compile. Deploy. Summit."
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "hello@bartstees.com"
+        },
+        "sameAs": [
+          "https://x.com/bartstees",
+          "https://instagram.com/bartstees",
+          "https://facebook.com/bartstees",
+          "https://pinterest.com/bartstees",
+          "https://tiktok.com/@bartstees",
+          "https://linkedin.com/company/bartstees"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bartstees.com/#website",
+        "url": "https://bartstees.com",
+        "name": "Bart's Tees",
+        "description": "Premium outdoor gear for developers who go outside.",
+        "publisher": {
+          "@id": "https://bartstees.com/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bartstees.com/#webpage",
+        "url": "https://bartstees.com",
+        "name": "Bart's Tees — Premium Outdoor Gear for Developers",
+        "description": "Compile. Deploy. Summit. Heavyweight hoodies, premium tees, and headwear for developers who go outside. First drop coming soon.",
+        "isPartOf": {
+          "@id": "https://bartstees.com/#website"
+        },
+        "about": {
+          "@id": "https://bartstees.com/#organization"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
